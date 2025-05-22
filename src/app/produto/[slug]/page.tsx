@@ -1,4 +1,5 @@
 import { productVariants } from '@/lib/product'
+
 import { ProductClient } from './_components/product-client'
 
 export default function ProductPage() {

@@ -1,21 +1,23 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+
+import { Loader } from 'lucide-react'
 import { toast } from 'sonner'
 
-import { useProductStore } from '@/store/product.store'
-import { FreightCalculator } from './freight-calculator'
-import { ImageGallery } from './image-gallery'
-import { VariantSelector } from './variant-selector'
 import { Button } from '@/components/ui/button'
 import {
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
+  TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { formatCurrency } from '@/lib/utils'
-import { Loader } from 'lucide-react'
+import { useProductStore } from '@/store/product.store'
 import { Product } from '@/types/product'
+
+import { FreightCalculator } from './freight-calculator'
+import { ImageGallery } from './image-gallery'
+import { VariantSelector } from './variant-selector'
 
 type Props = {
   productVariants: Product[]
